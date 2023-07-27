@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               ),
               Visibility(
                 visible: controller.hasData,
-                  child: Text("No data found")),
+                  child: const Text("No data found")),
               Expanded(
                 child: RefreshIndicator(
                   onRefresh: () async { await controller.getAllStudentsData(); },
@@ -55,11 +55,6 @@ class HomePage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100)
                                   ),
-                                  // child: Image.network("${Keys.baseUrl}/${controller.studentList[index].image}",
-                                  //   height: 80,
-                                  //   width: 80,
-                                  //   fit: BoxFit.cover,
-                                  // ),
                                   child:FadeInImage.assetNetwork(
                                     placeholder: 'assets/images/user.png',
                                     image: "${Keys.baseUrl}/${controller.studentList[index].image}",

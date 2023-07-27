@@ -218,7 +218,7 @@ class AddStudent extends StatelessWidget {
                                   showDatePicker(
                                     context: context,
                                     initialDate: DateTime.now(),
-                                    firstDate: DateTime(DateTime.now().year - 1),
+                                    firstDate: DateTime(DateTime.now().year - 100),
                                     lastDate: DateTime.now(),
                                     initialEntryMode:
                                     DatePickerEntryMode.calendarOnly,

@@ -23,7 +23,7 @@ class HomeController extends GetxController {
         studentList = [];
         StudentData studentRes = await StudentImpl().getAllStudents();
 
-        if (studentRes.status == "SUCCESS" && studentRes.students !=null) {
+        if (studentRes.status == "SUCCESS" && studentRes.students !=null && studentRes.students?.length != 0) {
           studentList = studentRes.students ?? [];
           hasData = false;
         }
