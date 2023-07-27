@@ -48,7 +48,6 @@ class StudentImpl extends StudentsApi {
   @override
   Future<StudentData> deleteStudents(Student student) async {
     try {
-      // Map<String,List<int>> image = {student.image ?? "": await File(student.image ?? "").readAsBytes()};
       String? response = await UtilDependency.httpService
           .post(DeleteStudentHttpAttribute({"id":student.id ?? ""},null));
       if (response != null) {

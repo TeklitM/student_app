@@ -5,8 +5,6 @@ import 'package:google_fonts/google_fonts.dart';
 class Message {
   Message.errorMessage({String? title, String? message, IconData? icon}) {
     Get.showSnackbar(GetSnackBar(
-      // title: title ?? "Error",
-      // message: message ?? "Error happend",
       titleText: Text(
         title ?? "oops!",
         style: GoogleFonts.roboto(
@@ -35,8 +33,6 @@ class Message {
   Message.info(
       {required String title, required String message, IconData? icon}) {
     Get.showSnackbar(GetSnackBar(
-      // title: title ?? "Error",
-      // message: message ?? "Error happend",
       titleText: Text(
         title,
         style: GoogleFonts.roboto(
